@@ -6,7 +6,7 @@ var Subtitle = React.createClass({
   },
   render: function() {
     return (
-      <h3>{this.props.text}</h3>
+      <h3 className="highlight">{this.props.text}</h3>
     );
   }
 });

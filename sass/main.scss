@@ -1,5 +1,5 @@
 html {
-  font: 14px Verdana, sans-serif;
+  font: 14px proxima-nova,"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
   background-color: #34495e;
   color: #f39c12;
 }
@@ -7,9 +7,26 @@ h1 {
   font-size: 38px;
   font-weight: normal;
 }
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+p {
+  margin: 35px 0;
+}
+.btn {
+  background-color: #16a085;
+  border-radius: 5px;
+  color: #ffffff;
+  padding: 10px;
+}
 .container {
   margin: 0 auto;
   padding-top: 35px; 
   text-align: center;
   width: 80%;
+}
+.highlight {
+  color: #61dafb;
 }
