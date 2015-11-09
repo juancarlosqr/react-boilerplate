@@ -8,7 +8,9 @@ var Title = React.createClass({
     }
   },
   onClickHandler: function(e) {
-    this.setState({text: 'Sorry... there are no Speakers yet'});
+    this.setState({text: 'Sorry... there are no Speakers yet'}, function () {
+      console.log('The user clicked on the Speakers button');
+    });
   },
   render: function() {
     var title = "ReactConf";
