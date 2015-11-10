@@ -5,12 +5,11 @@ var PriceDetailsTable = require('./PriceDetailsTable');
 var PriceTable = React.createClass({
   getInitialState: function () {
     return {
-      filterText: 'G',
+      filterText: '',
       isAvailableOnly: false
     };
   },
   handleInputChange: function(filterText, isAvailableOnly) {
-    console.log('values', filterText, isAvailableOnly);
     this.setState({
       filterText: filterText,
       isAvailableOnly: isAvailableOnly

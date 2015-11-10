@@ -3,7 +3,7 @@ var React = require('react');
 var SectionRow = React.createClass({
   render: function () {
     return (
-      <tr>
+      <tr className={this.props.section.available ? '': 'sold-out'}>
         <td>{this.props.section.name}</td>
         <td>{this.props.section.price}</td>
       </tr>
@@ -12,31 +12,28 @@ var SectionRow = React.createClass({
 });
 
 var PriceDetailsTable = React.createClass({
+  propTypes: {
+      filterText: React.PropTypes.string.isRequired,
+      isAvailableOnly: React.PropTypes.bool.isRequired,
+      sections: React.PropTypes.array.isRequired
+  },
   render: function () {
     var rows = [];
-    // var lastCategory = null;
     this.props.sections.forEach(function(section) {
-        // if (section.name.indexOf(this.props.filterText) === -1 || (!section.available && this.props.isAvailableOnly)) {
-        if (section.name.indexOf(this.props.filterText) === -1) {
-          return;
-        }
-        rows.push(<SectionRow section={section} key={section.name} />);
+      if (section.name.indexOf(this.props.filterText) === -1 || (!section.available && this.props.isAvailableOnly)) {
+        return;
+      }
+      rows.push(<SectionRow section={section} key={section.name} />);
     }.bind(this));
     return (
       <table>
         <thead>
           <tr>
-            <th>
-              Section
-            </th>
-            <th>
-              Price
-            </th>
+            <th>Section</th>
+            <th>Price</th>
           </tr>
         </thead>
-        <tbody>
-          {rows}
-        </tbody>
+        <tbody>{rows}</tbody>
       </table>
     );
   }
