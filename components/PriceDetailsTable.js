@@ -26,7 +26,7 @@ var PriceDetailsTable = React.createClass({
       rows.push(<SectionRow section={section} key={section.name} />);
     }.bind(this));
     return (
-      <table>
+      <table className="price-details-table">
         <thead>
           <tr>
             <th>Section</th>

@@ -8,8 +8,8 @@ var SearchBar = React.createClass({
   },
   handleChange: function () {
     this.props.onInputChange(
-      this.refs.filterTextInput.getDOMNode().value,
-      this.refs.isAvailableOnlyInput.getDOMNode().checked
+      this.refs["filterTextInput"].getDOMNode().value,
+      this.refs["isAvailableOnlyInput"].getDOMNode().checked
     );
   },
   render: function () {
