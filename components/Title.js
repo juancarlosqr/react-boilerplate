@@ -13,10 +13,10 @@ var Title = React.createClass({
     });
   },
   render: function() {
-    var title = "ReactConf";
+    var title = "Home";
     return (
       <div>
-        <h1>{title}</h1>
+        <h2>{title}</h2>
         <Subtitle text={this.state.text} />
         <div>
           <input type="button" className="btn" onClick={this.onClickHandler} value="Speakers" />

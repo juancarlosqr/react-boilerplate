@@ -18,7 +18,7 @@ var PriceTable = React.createClass({
   render: function () {
     return (
       <section>
-        <h3>Prices</h3>
+        <h2>Pricing</h2>
         <SearchBar
           filterText={this.state.filterText}
           isAvailableOnly={this.state.isAvailableOnly}
